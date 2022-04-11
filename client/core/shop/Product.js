@@ -1,0 +1,18 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css'
+export default function Product(props) {
+    const{product,onAdd} = props;
+    
+  return (
+    <div>
+        <img className="small" src={product.image} alt={product.name}></img>
+        <h3>{product.name}</h3>
+        <div>${product.price}</div>
+        <div>
+            <button onClick={() => onAdd(product)}>add to cart</button>
+        </div>
+    </div>
+
+  )
+}
