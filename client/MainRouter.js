@@ -30,4 +30,3 @@ const MainRouter = () => {
 
 export default MainRouter
 
-{/* <Route path="/shop" component={Shop}/> */}

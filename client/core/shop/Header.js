@@ -1,10 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css'
+import { Container, makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles(theme =>({
+    rowBlockCenter: {
+        background: "#e0e0e0",
+        display:"flex",
+        justifyContent:"space-between",
+        padding: "1rem",
+        margin: "0.5rem",
+        borderRadius: "0.5rem"
+    },
+    badge: {
+        backgroundColor: "#f04040",
+        border: "none",
+        color: "#ffffff",
+        width: "1.5rem"
+      }
+}))
+
 export default function Header(props){
     const {countCartItems} = props;
+    const classes = useStyles();
+
     return(
-        <header className="row block center">
+        <header className={classes.rowBlockCenter}>
             <div>
                 <a href="#/">
                     <h1>Small Shopping cart</h1>
@@ -16,7 +36,7 @@ export default function Header(props){
 
                 Cart{' '}
                 {countCartItems? (
-                    <button className='badge'>{countCartItems}</button>
+                    <button className={classes.badge}>{countCartItems}</button>
                 ): ('')
                 }
                 </a>
