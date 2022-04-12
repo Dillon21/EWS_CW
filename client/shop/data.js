@@ -8,6 +8,7 @@ import img7 from './images/Patriot pup.jpg';
 import img8 from './images/Pilot hat.jpg';
 import img9 from './images/Top hat.jpg';
 import img10 from './images/Ushanka.jpg';
+//fix me
 
 const data = {
     products: [
