@@ -23,6 +23,7 @@ const useStyles = makeStyles(theme => ({
     margin: `${theme.spacing(4)}px 0 ${theme.spacing(2)}px`,
     color: theme.palette.openTitle
   }
+
 }))
 
 export default function Users() {
@@ -50,7 +51,7 @@ export default function Users() {
     return (
       <Paper className={classes.root} elevation={4}>
         <Typography variant="h6" className={classes.title}>
-          All Users
+          Reviews Page
         </Typography>
         <List dense>
          {users.map((item, i) => {

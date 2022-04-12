@@ -1,9 +1,10 @@
 import { Component, useState } from 'react';
 import React from 'react';
-import Header from './core/shop/Header'
-import Main from './core/shop/Main';
-import Basket from './core/shop/Basket';
-import data from './core/shop/data';
+import Header from './shop/Header'
+import Main from './shop/Main';
+import Basket from './shop/Basket';
+import data from './shop/data';
+import Paper from '@material-ui/core/Paper';
 import { Container, makeStyles } from '@material-ui/core';
 
 ///////////////////////////////////////////////
@@ -16,7 +17,7 @@ const useStyles = makeStyles(theme =>({
 
     row: {
       display: "flex",
-      justifyContent: "space-between"
+      
   }
 }
 
@@ -48,11 +49,13 @@ function Shop() {
     }
   
     return (
+      <Paper className={classes.root} elevation={4}>
       <div className={classes.App}>
 
-        <Header countCartItems ={cartItems.length}></Header>
+        
         <div className={classes.row}>
           <Main onAdd={onAdd} products={products}></Main>
+
           <Basket
             onAdd={onAdd}
             onRemove={onRemove}
@@ -63,6 +66,8 @@ function Shop() {
   
   
       </div>
+      <Header countCartItems ={cartItems.length}></Header>
+      </Paper>
     );
   
   }

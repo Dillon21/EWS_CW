@@ -10,7 +10,9 @@ import Profile from './user/Profile'
 import EditProfile from './user/EditProfile'
 import UserAdmin from './user/UsersAdmin'
 import Shop from './Shop'
-import data from './core/shop/data'
+import ReviewsPage from './reviews/ReviewsPage'
+import Reviews from './reviews/Reviews'
+import data from './shop/data'
 
 const MainRouter = () => {
     return (<div>
@@ -21,6 +23,7 @@ const MainRouter = () => {
         <Route path="/shop" component={Shop}/>
         <Route path="/signup" component={Signup}/>
         <Route path="/signin" component={Signin}/>
+        <Route path="/reviews" component={ReviewsPage}/>
         <PrivateRoute path="/user/edit/:userId" component={EditProfile}/>
         <Route path="/user/:userId" component={Profile}/>
         <Route path="/useradmin/:userId" component={UserAdmin}/>

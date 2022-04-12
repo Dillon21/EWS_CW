@@ -31,6 +31,7 @@ const Menu = withRouter(({history}) => (
       <Link to="/shop">
         <Button style={isActive(history, "/shop")}>Shop</Button>
       </Link>
+      
       {
         !auth.isAuthenticated() && (<span>
           <Link to="/signup">
@@ -53,8 +54,13 @@ const Menu = withRouter(({history}) => (
             }}>Sign out</Button>
         </span>)
       }
+      <Link to="/reviews">
+        <Button style={isActive(history,"/reviews")}>Product reviews</Button>
+      </Link>
+
     </Toolbar>
   </AppBar>
+  
 ))
 
 export default Menu
