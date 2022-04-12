@@ -9,6 +9,9 @@ import myImg from './images/Molerat.jpg'
 import {Link} from 'react-router-dom'
 import {joke} from '../thirdparty/api-dadjokes.js'
 
+
+//makeStyles import to change the styling
+
 const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: 600,
@@ -35,6 +38,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function Home(){
+  //use the styles
   const classes = useStyles()
   const [jokes, setJokes] = useState({
     joke: 'No joke',
@@ -45,6 +49,7 @@ export default function Home(){
     const abortController = new AbortController()
     const signal = abortController.signal
 
+    //tell a joke on home page
     joke(signal).then((data) => {
       if (data && data.error) {
         //console.log("error in getting jokes: " + data.error)
@@ -69,7 +74,7 @@ export default function Home(){
         <Card className={classes.card}>
           <Typography variant="h6" className={classes.title}>
             <h2>Welcome to love for uglies homepage</h2>
-            
+
           </Typography>
           <Link to="/users"> Users </Link>
           <CardMedia className={classes.media} image={myImg} title="My Image"/>

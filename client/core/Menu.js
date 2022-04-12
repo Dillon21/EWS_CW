@@ -14,24 +14,29 @@ const isActive = (history, path) => {
   else
     return {color: '#ffffff'}
 }
+
+// Navigational bar
 const Menu = withRouter(({history}) => (
   <AppBar position="static">
     <Toolbar>
       <Typography variant="h6" color="inherit">
         Welcome to Love for the uglies!
       </Typography>
+      {/*take user to home*/}
       <Link to="/">
         <IconButton aria-label="Home" style={isActive(history, "/")}>
           <HomeIcon/>
         </IconButton>
       </Link>
+      {/*Take user to users page*/}
       <Link to="/users">
         <Button style={isActive(history, "/users")}>Users</Button>
       </Link>
+      {/*Take user to shop page*/}
       <Link to="/shop">
         <Button style={isActive(history, "/shop")}>Shop</Button>
       </Link>
-      
+      {/*sign up and sign in*/}
       {
         !auth.isAuthenticated() && (<span>
           <Link to="/signup">
@@ -44,6 +49,8 @@ const Menu = withRouter(({history}) => (
           </Link>
         </span>)
       }
+
+      {/*Allows authenticated user into their profile*/}
       {
         auth.isAuthenticated() && (<span>
           <Link to={"/user/" + auth.isAuthenticated().user._id}>
@@ -54,6 +61,7 @@ const Menu = withRouter(({history}) => (
             }}>Sign out</Button>
         </span>)
       }
+      {/*Link to product reviews*/}
       <Link to="/reviews">
         <Button style={isActive(history,"/reviews")}>Product reviews</Button>
       </Link>

@@ -18,6 +18,7 @@ const App = () => {
   return (
   <BrowserRouter>
       <ThemeProvider theme={theme}>
+        {/*Start chain*/}
         <MainRouter/>
       </ThemeProvider>
   </BrowserRouter>

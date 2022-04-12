@@ -6,13 +6,16 @@ import Imgcard from './Imgcard';
 import { indexOf } from 'lodash';
 
 //https://www.youtube.com/watch?v=B0E2esA5nQo&t=595s
+
+//Code tutorial from youtube video below
 //https://www.youtube.com/watch?v=AmIdY1Eb8tY
-//https://mui.com/material-ui/react-card/
+//Code was converted from HTML in video into react code
 
 export default function Product(props) {
     
     const{countCartItems,product,onAdd} = props;
     
+    //Styling and formatting
     const useStyles = makeStyles(theme =>({
       btnColor: {
         'font-size': '0.8rem',
@@ -55,12 +58,13 @@ export default function Product(props) {
 
   }))
     
+    //grab styling from local vairable
     const classes = useStyles();
     console.log(data.products)
     
     return(
             <div>
-
+            {/*Send single index of data array into Imgcard element*/}
           <Imgcard img={product.img} nme={product.nme} price={product.price} />
             <button className={classes.btnColor} onClick={() => onAdd(product)}>add to cart</button>
             </div>

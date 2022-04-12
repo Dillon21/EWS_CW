@@ -32,7 +32,8 @@ export default function Reviews(props) {
   const{products,onAdd} = props;
 
   return(
-
+      //Code did not produce usable object
+      //could not convert object
     <div className={classes.row}>
              {products.map((product) => (
                 <Cardo key ={product.id} product={product} onAdd={onAdd}></Cardo>

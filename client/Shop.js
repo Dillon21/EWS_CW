@@ -25,10 +25,14 @@ const useStyles = makeStyles(theme =>({
 
 function Shop() {
 
+  //Code to forward status of array variable from datafile
+  //containing img's and names of the files
     const { products } = data;
+    //cartItems carries the number of items in th cart
     const [cartItems, setCartItems] = useState([]);
     const classes = useStyles();
 
+    // add quantity to basket display in bottom right od shop screen
     const onAdd = (product) => {
       const exist = cartItems.find(x => x.id === product.id);
       if (exist) {
@@ -37,7 +41,7 @@ function Shop() {
         setCartItems([...cartItems, { ...product, qty: 1 }]);
       }
     };
-  
+    //remove 1 from basket display in show screen
     const onRemove = (product) => {
       const exist = cartItems.find((x) => x.id === product.id);
       if (exist.qty === 1) {
@@ -49,13 +53,16 @@ function Shop() {
     }
   
     return (
+      //set first container
       <Paper className={classes.root} elevation={4}>
       <div className={classes.App}>
 
         
         <div className={classes.row}>
+          {/*call Main funtion to split the data array into seperate values for basket*/}
           <Main onAdd={onAdd} products={products}></Main>
 
+          {/*add and remove from basket*/}
           <Basket
             onAdd={onAdd}
             onRemove={onRemove}
@@ -66,6 +73,8 @@ function Shop() {
   
   
       </div>
+
+      {/*called header but it is footer containing the current amount in basket and checkout button.*/ }
       <Header countCartItems ={cartItems.length}></Header>
       </Paper>
     );

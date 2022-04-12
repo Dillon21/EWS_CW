@@ -16,6 +16,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Patriot from './Patriot pup.jpg'
 
+// Card code taken from MUI website //https://mui.com/material-ui/react-card/
+//Expand card after clicking arrow
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
@@ -34,6 +36,7 @@ export default function Cardo(props) {
     setExpanded(!expanded);
   };
 
+  /*setting up card layout*/
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
@@ -49,6 +52,7 @@ export default function Cardo(props) {
         }
         
       />
+      {/*Put image in card media element*/}
       <CardMedia
         component="img"
         height="194"
@@ -80,6 +84,7 @@ export default function Cardo(props) {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
          
+         {/*dummy text as placeholder*/}
         <Typography paragraph>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
           </Typography>

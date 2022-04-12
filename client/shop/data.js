@@ -8,7 +8,8 @@ import img7 from './Images/Patriot pup.jpg';
 import img8 from './Images/Pilot hat.jpg';
 import img9 from './Images/Top hat.jpg';
 import img10 from './Images/Ushanka.jpg';
-//fix me
+// shop data
+//was convertable for shop but did not convert for reviews.
 
 const data = {
     products: [

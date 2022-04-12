@@ -25,11 +25,17 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
+/* get data for reviews page*/
+/*not currently functioning fully*/
+/* sends away correct number of elements to be made into cards*/
+/*output is not convertable to card data */
+
 function ReviewsPage() {
     const { products } = data;
     const [cartItems, setCartItems] = useState([]);
     const classes = useStyles()
 
+    
     const onAdd = (product) => {
         const exist = cartItems.find(x => x.id === product.id);
         if (exist) {
@@ -41,15 +47,20 @@ function ReviewsPage() {
 
     return (
         <Paper className={classes.root} elevation={4}>
+
+            {/*should have*/}
+            {/* Important and should have been implemented as customer reviews would be crutial*/}
             <Button>
                 Add Review
             </Button>
-
+            
             <Typography variant="h6" className={classes.title}>
                 Reviews page
             </Typography>
             
-            
+            {/*push products data to reviews component*/}
+            {/*not carrying data that is convertable*/}
+            {/* i was unable to convert from object*/}
             <Reviews onAdd={onAdd} products={products}></Reviews>
 
         </Paper>
