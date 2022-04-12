@@ -14,7 +14,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import data from '../shop/data'
+import Patriot from './Patriot pup.jpg'
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -52,8 +52,8 @@ export default function Cardo(props) {
       <CardMedia
         component="img"
         height="194"
-        image="/static/images/cards/paella.jpg"
-        alt="Paella dish"
+        image={Patriot}
+        alt="Patriot pup"
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
