@@ -10,7 +10,7 @@ import Profile from './user/Profile'
 import EditProfile from './user/EditProfile'
 import UserAdmin from './user/UsersAdmin'
 import Shop from './Shop'
-import ReviewsPage from './reviews/ReviewsPage'
+import ReviewsPage from './ReviewsPage'
 import Reviews from './reviews/Reviews'
 import data from './shop/data'
 
