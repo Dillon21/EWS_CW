@@ -47,8 +47,7 @@ export default function Cardo(props) {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        
       />
       <CardMedia
         component="img"
