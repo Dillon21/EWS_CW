@@ -14,6 +14,7 @@ import ReviewsPage from './ReviewsPage'
 import Reviews from './reviews/Reviews'
 import data from './shop/data'
 
+
 //work from nav bar show only one screen at a time depending on switchboard
 const MainRouter = () => {
     return (<div>

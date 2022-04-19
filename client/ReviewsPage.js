@@ -10,17 +10,25 @@ import Person from '@material-ui/icons/Person'
 import { Link } from 'react-router-dom'
 import Reviews from './reviews/Reviews'
 import data from './shop/data';
+import Comment from './reviews/Comment'
+import { minWidth } from '@mui/system'
 
 
 
 const useStyles = makeStyles(theme => ({
     root: theme.mixins.gutters({
-        padding: theme.spacing(1),
-        margin: theme.spacing(5)
+        
+        margin: theme.spacing(1),
+        width:"100%",
+        height:"100%"
     }),
     title: {
         margin: `${theme.spacing(4)}px 0 ${theme.spacing(2)}px`,
         color: theme.palette.openTitle
+    },
+
+    com:{
+        
     }
 
 }));
@@ -31,7 +39,7 @@ const useStyles = makeStyles(theme => ({
 /*output is not convertable to card data */
 
 function ReviewsPage() {
-    const { products } = data;
+    const {products} = data;
     const [cartItems, setCartItems] = useState([]);
     const classes = useStyles()
 
@@ -46,10 +54,11 @@ function ReviewsPage() {
       };
 
     return (
+        <div>
         <Paper className={classes.root} elevation={4}>
 
             {/*should have*/}
-            {/* Important and should have been implemented as customer reviews would be crutial*/}
+            {/* Important and should have been implemented as customer reviews would be crucial*/}
             <Button>
                 Add Review
             </Button>
@@ -61,11 +70,16 @@ function ReviewsPage() {
             {/*push products data to reviews component*/}
             {/*not carrying data that is convertable*/}
             {/* i was unable to convert from object*/}
-            <Reviews onAdd={onAdd} products={products}></Reviews>
+            <Reviews  onAdd={onAdd} products={products}></Reviews>
 
+    
         </Paper>
 
+        <Paper>
+            <Comment className={classes.com}/>
+        </Paper>
 
+    </div>
     )
 
 

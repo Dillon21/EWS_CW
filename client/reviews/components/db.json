@@ -1,0 +1,10 @@
+{
+    "posts": [
+
+    ],
+
+    "comments":[{
+        "content": "hello world",
+        "postId": 1
+    }]
+}

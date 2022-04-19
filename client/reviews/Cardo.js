@@ -15,6 +15,8 @@ import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Patriot from './Patriot pup.jpg'
+import data from '../shop/data'
+import Imgcard from './Imgcard';
 
 // Card code taken from MUI website //https://mui.com/material-ui/react-card/
 //Expand card after clicking arrow
@@ -31,14 +33,18 @@ const ExpandMore = styled((props) => {
 
 export default function Cardo(props) {
   const [expanded, setExpanded] = React.useState(false);
-    console.log(props)
+  const product = props.product;
+  const imag = props.product.img;
   const handleExpandClick = () => {
     setExpanded(!expanded);
+    console.log(props)
+
   };
+  
 
   /*setting up card layout*/
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, minWidth: 150 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -56,9 +62,11 @@ export default function Cardo(props) {
       <CardMedia
         component="img"
         height="194"
-        image={Patriot}
+        image={imag}
         alt="Patriot pup"
       />
+
+    
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           
@@ -76,6 +84,7 @@ export default function Cardo(props) {
           onClick={handleExpandClick}
           aria-expanded={expanded}
           aria-label="show more"
+          
         >
             
           <ExpandMoreIcon />

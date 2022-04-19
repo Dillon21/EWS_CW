@@ -6,6 +6,7 @@ import Basket from './shop/Basket';
 import data from './shop/data';
 import Paper from '@material-ui/core/Paper';
 import { Container, makeStyles } from '@material-ui/core';
+import { minHeight } from '@mui/system';
 
 ///////////////////////////////////////////////
 //////////////CODE FROM TUTORIAL///////////////
@@ -13,12 +14,24 @@ import { Container, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme =>({
   App: {
-    textAlign: "center",
+    textAlign: "flex",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+    gridGap: "12px",
+    minHeight: "auto",
 
     row: {
       display: "flex",
+      minHeight: "200px",
+      backgroundColor: "#eee",
+      minHeight: "auto"
       
-  }
+  },
+
+    root:{
+      minHeight:"auto",
+      display: "flex"
+    }
 }
 
 }));
@@ -60,7 +73,7 @@ function Shop() {
         
         <div className={classes.row}>
           {/*call Main funtion to split the data array into seperate values for basket*/}
-          <Main onAdd={onAdd} products={products}></Main>
+          <Main className={classes.row} onAdd={onAdd} products={products}></Main>
 
           {/*add and remove from basket*/}
           <Basket

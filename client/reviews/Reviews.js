@@ -21,23 +21,25 @@ const useStyles = makeStyles(theme =>({
       row: {
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
+        
         background: "#82A9C5",
+        minWidth: "1300px"
     }
 }))
 
 export default function Reviews(props) {
   const [expanded, setExpanded] = React.useState(false);
   const classes = useStyles();
-  const{products,onAdd} = props;
+  const{products} = props;
 
   return(
       //Code did not produce usable object
       //could not convert object
     <div className={classes.row}>
              {products.map((product) => (
-                <Cardo key ={product.id} product={product} onAdd={onAdd}></Cardo>
+                <Cardo key ={product.id} product={product}></Cardo>
             ))} 
     </div>
   );
 }
+
