@@ -67,7 +67,7 @@ return (
           <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
         </ListItemAvatar>
         <ListItemText
-          primary="Brunch this weekend?"
+          primary="Positive Review?"
           secondary={
             <React.Fragment>
               <Typography
@@ -78,7 +78,7 @@ return (
               >
                 Ali Connors
               </Typography>
-              {" — I'll be in your neighborhood doing errands this…"}
+              {"- The doggiedora fits perfectly!!"}
             </React.Fragment>
           }
         />
@@ -89,7 +89,7 @@ return (
           <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
         </ListItemAvatar>
         <ListItemText
-          primary="Summer BBQ"
+          primary="Positive Review"
           secondary={
             <React.Fragment>
               <Typography
@@ -100,7 +100,7 @@ return (
               >
                 to Scott, Alex, Jennifer
               </Typography>
-              {" — Wish I could come, but I'm out of town this…"}
+              {" — Patriot pup hat looks amazing"}
             </React.Fragment>
           }
         />
@@ -111,7 +111,7 @@ return (
           <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
         </ListItemAvatar>
         <ListItemText
-          primary="Oui Oui"
+          primary="Negative Review"
           secondary={
             <React.Fragment>
               <Typography
@@ -122,7 +122,7 @@ return (
               >
                 Sandra Adams
               </Typography>
-              {' — Do you have Paris recommendations? Have you ever…'}
+              {' — Bought the jester costume, not happy not worth $30 :('}
             </React.Fragment>
           }
         />

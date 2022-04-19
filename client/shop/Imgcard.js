@@ -17,7 +17,7 @@ const Imgcard = (props) =>{
             <img src={props.img} width={150} height={150}/>
             <div>
                 <h5>{props.nme}</h5>
-                <p>{props.price}</p>
+                <p>${props.price}</p>
             </div>
         </div>
     </div>
